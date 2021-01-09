@@ -1,28 +1,15 @@
+package sorteio;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-public class Sorteio {
-	public static String sorteia() {
-
-		
-		List<String> trabalhos = new ArrayList<String>();
-		trabalhos.add("Grace");
-		trabalhos.add("Gabriela");
-		trabalhos.add("Guilherme Karam");
-		trabalhos.add("Guilherme");
-		trabalhos.add("Mateus");
-		trabalhos.add("Matias");
-		trabalhos.add("Fabio");
-
-		Collections.shuffle(trabalhos);
-
-		return trabalhos.get((int) Math.random() * trabalhos.size());
-	}
-
+public class AmigoSecreto {
+	
 	public static void main(String[] args) {
+		 Sorteio sorteio = new Sorteio();
 		
 		List<String> alunos= new ArrayList<String>();
 		alunos.add("Grace");
@@ -40,7 +27,7 @@ public class Sorteio {
 		for (int i = 0; i < alunos.size() ; i++) {
 			boolean novo = false;
 			while (!novo) {
-				aux = sorteia();
+				aux = Sorteio.regraDoSorteio();
 				if (!sorteados.contains(aux) && !alunos.get(i).equals(aux)) {
 					novo = true;
 					sorteados.add(aux);
